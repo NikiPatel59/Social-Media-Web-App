@@ -1,0 +1,44 @@
+ #likecount{
+   border: 0px none;
+   width: 28px;
+   margin-top: 10px;
+ }
+ #like{
+   margin-top: 10px;
+ }
+ #commentcount{
+   border: 0px none;
+   width: 24px;
+   margin-left: 290px;
+   margin-top: 10px;
+ }
+ #commentbox{
+   margin-left: 7px;
+   margin-top: 10px;
+ }
+ #addcomment{
+   margin-left: 8px;
+   margin-top: 10px;
+ }
+ #bod{
+  background-image: url("download2.webp");
+   background-size: 1800px 1200px;
+}
+body {
+    text-align:center;
+    position:relative;
+    top:80px;
+}
+#social{
+    display: inline-block;
+    width:1000px;
+    font-weight:bold;
+    position:relative;
+    left:4px;
+
+
+}
+h1{
+  font-family: cursive;
+  font-size: 22px;
+}

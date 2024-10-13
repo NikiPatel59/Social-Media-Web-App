@@ -1,0 +1,33 @@
+<?php
+include("connection.php");
+$sql = "select count(comments) from comment";
+   $resulttt = $conn->query($sql);
+   ?>
+<html>
+<h1>Photogram</h1>
+<head><link rel="stylesheet" href="socialmedia.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+ <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+ <script src="socialmedia.js"></script>
+ <script src="commentvalidate.js"></script>
+</head>
+<body id = "bod">
+<img src="greece.jpg" alt="Trulli" width="500" height="333">
+<form method="post" id="social">
+
+<input type = "text" name="likecount" id="likecount">
+<label for="like">Likes</label>
+
+<button type="button" id="like">Like</button>
+
+<?php $newcount = mysqli_fetch_assoc($resulttt);?>
+<input type = "text" name="commentcount" id="commentcount" value=<?php echo $newcount["count(comments)"]?>>
+<label for="comment">Comments</label><br>
+
+<textarea id="commentbox" name="commentbox" rows="4" cols="68" required>
+</textarea><br>
+<div id = "comm"></div>
+<button type="button" id="addcomment">Add Comment</button>
+
+</body>
+</html>
